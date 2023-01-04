@@ -13,7 +13,7 @@ db.pool.query(
     value TEXT,
     PRIMARY KEY (id)
 )`,
-  (err, resuts, fields) => {
+  (err, results, fields) => {
     console.log("results", results);
   }
 );

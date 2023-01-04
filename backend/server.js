@@ -16,6 +16,18 @@ app.get("/api/values", (req, res) => {
   });
 });
 
+app.post("/api/value", (req, res) => {
+  db.pool.query(
+    `INSERT INTO lists (value) VALUES("${req.body.value}")`,
+    (err, results, fileds) => {
+      if (err) {
+        return res.status(500).send(err);
+      }
+      return res.json({ success: true, value: req.body.value });
+    }
+  );
+});
+
 app.listen(5000, () => {
   console.log("server listened on 5000");
   console.log(db);

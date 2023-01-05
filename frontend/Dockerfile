@@ -1,8 +1,8 @@
-FROM node:alpine
+FROM node:16.15.1-alpine as builder
 
 WORKDIR /app
 
-COPY ./package.json .
+COPY ./package.json ./
 
 RUN npm install
 

@@ -15,7 +15,7 @@ services:
     image: minuet1215/docker-nginx
     ports:
       - "80:80"
-    mem_limits: 128m
+    mem_limit: 128m
     links:
       - frontend
       - backend
@@ -27,10 +27,10 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
-    mem_limit: 128m
     environment:
       MYSQL_HOST: $MYSQL_HOST 
       MYSQL_USER: $MYSQL_USER 
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: $MYSQL_DATABASE
       MYSQL_PORT: $MYSQL_PORT   
+    mem_limit: 128m

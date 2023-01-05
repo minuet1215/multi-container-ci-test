@@ -21,3 +21,15 @@ after_success:
   - docker push minuet1215/docker-frontend
   - docker push minuet1215/docker-backend
   - docker push minuet1215/docker-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "docker-fullstack-app"
+  env: "Dockerfullstackapp-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-2-016162039563"
+  on:
+    branch: prod
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_ACCESS_SECRET_KEY

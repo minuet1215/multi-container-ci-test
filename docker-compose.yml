@@ -15,6 +15,10 @@ services:
     image: minuet1215/docker-nginx
     ports:
       - "80:80"
+    mem_limits: 128m
+    links:
+      - frontend
+      - backend
 
 
   backend:

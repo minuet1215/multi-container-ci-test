@@ -12,4 +12,6 @@ linux2는 `docker-compose.yml`이 `Dockerrun.aws.json` 파일을 대신해서 �
 ---
 
 # 해당 브랜치는,
-`docker-compose.yml` 파일이 아닌 `Dockerrun.aws.json` 파일을 이용해서 eb 환경을 구축한다.
+~~`docker-compose.yml` 파일이 아닌 `Dockerrun.aws.json` 파일을 이용해서 eb 환경을 구축한다.~~
+
+aws에서 더 이상 권장하지 않는 방식이다. docker-compose.yml을 이용하자...
